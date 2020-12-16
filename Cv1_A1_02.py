@@ -3,8 +3,8 @@ from shutil import copy
 import cv2 as cv
 import numpy as np
 
-PATH_READ = '/Users/emibrambilla/Desktop/courses/3_cv1/Assignemnts_cv1/1/img/visual_attention.png'
-PATH_WRITE = '/Users/emibrambilla/Desktop/'
+PATH_READ = '~/img/visual_attention.png'
+PATH_WRITE = '~/Desktop/'
 
 #load image 
 image = cv.imread(PATH_READ)
