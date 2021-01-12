@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{secnumdepth}{0}
+
+\title{Computer Vision Assignment 1}
+\author{Emilio Brambilla, Lasse Haffke, Moritz Lahann}
+
+\begin{document}
+
+\maketitle
+
+\section{Task 3} 
+\subsection{a)}
+The expected value is the mean of the values weighted by their respective probabilities.
+\begin{align}
+   \mathbb{E}[X] &= \sum_{i = 1}^{5} X_i p(X_i) \\
+   \mathbb{E}[X] &= 0 \cdot 0.1 + 1 \cdot 0.3 + 0 \cdot 0 + 3 \cdot 0.2 + 4 \cdot 0.4 + 5 \cdot 0 \\
+   \mathbb{E}[X] &= 2.5
+\end{align}
+The expected value $\mathbb{E}[X]$ of this normalized histogram is 2.5.
+\\
+\\
+In a cumulative histogram, each bin contains the values inside it plus the values of all previous bins. The cumulative histogram of a normalized histogram will always reach the maximum value of 1.0, as that is the sum of all probabilities.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c}
+        Bins & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+        Cumulative Value & 0.1 & 0.4 & 0.4 & 0.6 & 1.0 & 1.0 
+    \end{tabular}
+\end{table}
+
+\subsection{b)}
+The $L_1$ distance is given by the sum of the differences of the histogram bins. The $L_1$ distance between $p(X)$ and $q(X)$ is 1.4.
+\begin{align}
+    L_1 &= \sum_{i=1}^{5} |p(X_i) - q(X_i)| \\
+    L_1 &= |0.1 - 0| + |0.3 - 0.1| + |0 - 0.3| + |0.2 - 0| + |0.4 - 0.2| + |0 - 0.4| \\
+    L_1 &= 1.4
+\end{align}
+
+\end{document}
